@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacts!</title>
+</head>
+  <body style="text-align: center; color: aliceblue; background-color: #262626;" >
+    <h1>Thank You!!!</h1>
+      <p id="gv1" style="color: aliceblue; font-size: 35px; text-transform: capitalize; text-align: center;">
+    </p>
+   <p style="color: aliceblue; font-size: 25px;text-align: center; ">
+     We Will Contact you soon. On Your Email <var id="gv2"></var>.</p>
+    <script>
+        var a = sessionStorage.getItem("a");
+        document.getElementById("gv1").innerHTML= a;
+        var e = sessionStorage.getItem("e");
+        document.getElementById("gv2").innerHTML= e;
+    </script>
+
+<div >
+<a href="Template 2.html" ><button style="font-size: 20px;
+    background-color: #45c6ed;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px;">Keep Browsing</button></a>
+    </div>
+    </body>
+</html>

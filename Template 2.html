@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Temp2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Second Template</title>
+<link rel="stylesheet" 
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+<!-- LEFT SECTION.............. -->
+<div class="full">
+<div class="cols1" >
+  <section class="head">
+       <img src="logo.png" alt="logo top left corner" class="logo">
+        <div class="search">
+<p class="pt1"> SEARCH: </p>
+<p class="pt"> 
+  <input type="search" placeholder="Search..." style="width:80%; height:30px;"value="">
+<button type="submit"  class="iconbutt">
+  <i class="fa fa-search"></i> </button> </p>
+        </div>
+
+
+
+     </section>
+      <div class="block">
+        <div class="adcol" >
+          <p class="adcolp" >ADVERTISE:</p>
+          <div class="adcolimg">
+            <div>
+            <a href="#"><img src="ad1.png" alt=""></a>
+            <a href="#"><img src="ad2.png" alt=""></a>
+            <a href="#"><img src="ad3.png" alt=""></a>
+            <a href="#"><img src="ad4.png" alt=""></a><br>
+          </div> </div>
+<div class="learn" ><p><a href="#"style="text-decoration:none; color:grey;">
+  Learn More About Advertising here.</a></p>
+            </div> 
+        </div>
+      </div>
+<div class="navm">
+  <p style="padding-left:10px;padding-top:20px;color:white;">NAVIGATION:</p>
+      <div>
+    <input type="button" class="navbut" id="li1" value="CATEGORIES" onclick="myfunc()">
+    <input type="button" class="navbut" id="li2" value="ARCHIVES" onclick="myfunc2()">
+    <input type="button" class="navbut" id="li3" value="PAGES" onclick="myfunc3()">
+    <div class="">
+    <div class="navlist" id="lists1">
+  <p style="border-top: 1px solid;">&bull; Lorem ipsum dolor </p>
+  <p>&bull; consectetur adipisicing</p>
+  <p>&bull; sed do 1 eiusmod</p>
+  <p>&bull; Ut enim ad minim veniam, </p>
+  <p>&bull; sint occaecat </p>
+  <p>&bull; sunt in culpa qui officia.</p>
+  <p>&bull; sint occaecat </p>
+</div>
+<div class="navlist" id="lists2">
+<p style="border-top: 1px solid;">&bull; Lorem ipsum dolor </p>
+<p>&bull; consectetur type 2 </p>
+<p>&bull; sed do eiusmod</p>
+<p>&bull; sunt in culpa qui officia.</p>
+<p>&bull; sint occaecat </p>
+<p>&bull; Ut enim ad minim veniam</p>
+<p>&bull; sint occaecat </p>
+</div>
+<div class="navlist" id="lists3">
+<p style="border-top: 1px solid;">&bull; Lorem ipsum dolor</p>
+<p>&bull; consectetur type 3 </p>
+<p>&bull; sed do eiusmod</p>
+<p>&bull; Ut enim ad minim,</p>
+<p>&bull; sint occaecat</p>
+<p>&bull; sunt in culpa qui.</p>
+<p>&bull; sint occaecat </p>
+</div>
+    </div>
+      </div>
+</div>
+  <div class="block">
+<div class="adcol" >
+  <p style="padding-left:10px;padding-top:20px;color:white;">FLICKER GALLERY:</p>
+  <div class="adcolimg">
+    <div>
+    <a href="#"><img src="ad1.png" alt=""></a>
+    <a href="#"><img src="ad2.png" alt=""></a>
+    <a href="#"><img src="ad3.png" alt=""></a>
+    <a href="#"><img src="ad4.png" alt=""></a><br>
+  </div> </div>
+<div class="learn" ><p><a href="#"style="text-decoration:none; color:grey;">
+  Learn More About Advertising here.</a></p>
+    </div>
+</div>
+  </div>
+
+
+  <div class="block">
+    <div class="adcol" >
+      <p style="padding-left:10px;padding-top:20px;color:white;">CONTACT US:</p>
+      <div class="adcolimg">
+        <div id="contact"class="cont">
+       
+       <input type="text" name="fn" id="gv" placeholder="Full Name..." id="gv"> <br>
+      
+       <input type="email" name="en" id="ev" placeholder="Email..."> <br>
+       
+       <textarea name="mn" id="" cols="20" rows="10" placeholder="Your Message.."></textarea> <br>
+       <!-- <button type="submit" onclick="readval()">Submit</button> -->
+       <p style="padding-left:10px;padding-top:20px;color:white;" onclick="readval()">Submit</p>
+      </div> 
+    </div>
+ <!-- js  script for sending data from one page to another........ -->
+<script>
+  function readval()
+  {
+    var a = document.getElementById("gv").value;
+    sessionStorage.setItem("a", a);
+    var e = document.getElementById("ev").value;
+    sessionStorage.setItem("e", e);
+    if(document.getElementById("gv").value == 0 && document.getElementById("ev").value == 0)
+    {
+      alert("Fields Can't Be Empty");
+    }
+    else{
+      window.location.href="t2p1.html";
+    }
+  }
+  
+</script>
+
+
+    </div>
+      </div>
+
+</div>
+<script type="text/javascript">
+document.getElementById("li1").onclick = function() {myfunc()};
+  function myfunc(){
+    document.getElementById("li1").style.backgroundColor="#45c6ed";
+    document.getElementById("li3").style.backgroundColor="#383838";
+    document.getElementById("li2").style.backgroundColor="#383838";
+  var a = document.getElementById("lists1");
+  var b = document.getElementById("lists2");
+  var c = document.getElementById("lists3");
+   c.style.display="none";
+   b.style.display="none";
+   a.style.display="block";
+}
+document.getElementById("li2").onclick = function() {myfunc2()};
+  function myfunc2(){
+    document.getElementById("li2").style.backgroundColor="#45c6ed";
+    document.getElementById("li1").style.backgroundColor="#383838";
+    document.getElementById("li3").style.backgroundColor="#383838";
+  var a = document.getElementById("lists1");
+  var b = document.getElementById("lists2");
+  var c = document.getElementById("lists3");
+   c.style.display="none";
+   a.style.display="none";
+   b.style.display="block";
+}
+
+document.getElementById("li3").onclick = function() {myfunc3()};
+  function myfunc3(){
+    document.getElementById("li3").style.backgroundColor="#45c6ed";
+    document.getElementById("li1").style.backgroundColor="#383838";
+    document.getElementById("li2").style.backgroundColor="#383838";
+  var a = document.getElementById("lists1");
+  var b = document.getElementById("lists2");
+  var c = document.getElementById("lists3");
+   b.style.display="none";
+   a.style.display="none";
+   c.style.display="block";
+}
+</script>
+
+
+
+
+    <!-- RIGHT SECTION..................... -->
+<div class="cols2" style="background-color:#e3e3e3">
+  <div class="navbar">
+      <a href="#"> HOME </a>
+      <a href="#">ABOUT US</a>
+      <a href="#">ARCHIVES</a>
+      <a href="#contact">CONTACT US</a>
+      <div>
+      <img src="topright.png" alt=""></div>
+    </div>
+
+<div class="">
+  <img src="horse.jpg" alt="HORSE RIDDING IMAGE" class="mainimg">
+</div>
+<div class="">
+  <p class="titles">THE HIDDEN ART OF WP PREMIUM DESING</p>
+</div>
+
+<div class="blueline">
+  <p style="float:left">On 01.01.2015, in <b>Tutorials,</b> by <b>Integrated Scold</b></p>
+<p style="float:right"><b>11</b> Comments</p>
+</div>
+
+<div class="cc">
+    <img src="advertise.jpg" alt="" width="200px" height="100px">
+    <p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b><br>
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      nisi ut aliquip ex ea commodo consequat.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      nisi ut aliquip ex ea commodo consequat. 
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      nisi ut aliquip ex ea commodo consequat.
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+      </p><br>
+</div>
+<div class="comm">
+<button type="button" name="button">LEAVE YOUR <a href="#">COMMNET </a> ></button>
+</div>
+
+<div class="">
+  <p class="titles">WHAT IS THE FUTURE OF ONLINE NEWS</p>
+</div>
+<div class="blueline">
+  <p style="float:left">On 01.01.2015, in <b>Tutorials,</b> by <b>Integrated Scold</b></p>
+<p style="float:right"><b>7</b> Comments</p>
+</div>
+<div class="cc">
+  <img src="violen.jpg" alt="" width="200px" height="100px">
+  <p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b><br>
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+    nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam,
+     quis nostrud exercitation ullamco laboris
+    nisi ut aliquip ex ea commodo consequat.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+    nisi ut aliquip ex ea commodo consequat.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+</div>
+<div class="comm">
+<button type="button" name="button">LEAVE YOUR <a href="#">COMMNET </a> ></button>
+</div>
+<div class="">
+  <p class="titles">EXCELLENT WP SOLUTIONS FOR YOUR BUSINESS</p>
+</div>
+<div class="blueline">
+  <p style="float:left">On 01.01.2015, in <b>Tutorials,</b> by <b>Integrated Scold</b></p>
+<p style="float:right"><b>12</b> Comments</p>
+</div>
+<div class="cc">
+  <img src="t31.jpg" alt="" width="200px" height="100px">
+  <p><b>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</b><br>
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+    nisi ut aliquip ex ea commodo consequat.Ut enim ad minim veniam, 
+    quis nostrud exercitation ullamco laboris
+    nisi ut aliquip ex ea commodo consequat.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+    nisi ut aliquip ex ea commodo consequat.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+</div>
+<div class="comm">
+<button type="button" name="button">LEAVE YOUR <a href="#">COMMNET </a> ></button>
+</div>
+</div>
+</div>
+  </body>
+</html>
